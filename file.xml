@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library [
+<!ELEMENT library (author | book)*>
+<!ELEMENT book (title , year? , publisher?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT author (firstName , middleName? , lastName , nationality?)>
+<!ELEMENT firstName (#PCDATA)>
+<!ELEMENT lastName (#PCDATA)>
+<!ELEMENT middleName (#PCDATA)>
+<!ELEMENT nationality (#PCDATA)>
+<!ATTLIST book ISBN ID #REQUIRED>
+<!ATTLIST author id ID #REQUIRED>
+<!ATTLIST book authors IDREFS #REQUIRED>
+]>
+<library>
+    <book ISBN="_12365" authors="_1 _2">
+        <title>DOM</title>
+        <year>2009</year>
+        <publisher>Aj library</publisher>
+    </book>
+    
+    <author id="_1">
+        <firstName>first</firstName>
+        <middleName>b</middleName>
+        <lastName>book</lastName>
+        <nationality>syrian</nationality>
+    </author>
+    <author id="_2">
+        <firstName>second</firstName>
+        <middleName>book</middleName>
+        <lastName>author</lastName>
+        <nationality>syrian</nationality>
+    </author>
+    <book ISBN="_1452" authors="_1">
+        <title>boooke</title>
+        <year>2016-05-19</year>
+        <publisher>some</publisher>
+    </book>
+    <book ISBN="_147" authors="_1 _2">
+        <title>multi</title>
+        <year>2013-12-31</year>
+        <publisher>me</publisher>
+    </book>
+    <book ISBN="_1234" authors="_1">
+        <title>some</title>
+        <year>2013-12-31</year>
+        <publisher>publisher</publisher>
+    </book>
+    
+    
+</library>
